@@ -10,30 +10,7 @@ def add_args(parser):
     parser.add_argument('--dryRun', required=False, action='store_true', help='Dry run script')
 
 def get_random_metric(recent_args):
-    metrics = ["attack",
-            "strength",
-            "defence",
-            "hitpoints",
-            "ranged",
-            "prayer",
-            "magic",
-            "cooking",
-            "woodcutting",
-            "fletching",
-            "fishing",
-            "firemaking",
-            "crafting",
-            "smithing",
-            "mining",
-            "herblore",
-            "agility",
-            "thieving",
-            "slayer",
-            "farming",
-            "runecraft",
-            "hunter",
-            "construction"
-    ]
+    metrics = ['attack', 'defence', 'strength', 'hitpoints', 'ranged', 'prayer', 'magic', 'cooking', 'woodcutting', 'fletching', 'fishing', 'firemaking', 'crafting', 'smithing', 'mining', 'herblore', 'agility', 'thieving', 'slayer', 'farming', 'runecrafting', 'hunter', 'construction']
     return random.choice([item for item in metrics if item not in recent_args[-5:]])
 
 def main():
